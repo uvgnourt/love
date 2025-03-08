@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Nhạc</title>
+</head>
+<body>
+
+    <iframe src="music.html" style="display:none;"></iframe> <!-- Nhúng trang nhạc ẩn -->
+    
+    <iframe id="content-frame" src="home.html" width="100%" height="600px"></iframe>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById("content-frame").src = page;
+        }
+    </script>
+
+    <button onclick="loadPage('about.html')">Trang Giới thiệu</button>
+    <button onclick="loadPage('contact.html')">Trang Liên hệ</button>
+
+</body>
+</html>
